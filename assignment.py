@@ -78,6 +78,7 @@ else:
             df = df.sort_values(
                 by="30storey_next",
                 ascending=False)
+            st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
             st.write("Structural PO list:")
             st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
         

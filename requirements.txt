@@ -3,4 +3,4 @@
 # platform: win-64
 streamlit==0.86.0
 pandas==1.0.5
-
+xlrd = 1.0.0

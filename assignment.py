@@ -1,14 +1,10 @@
-# Author: Prakash Sukhwal
-# version: 2.0
-# Aug 2021
+# Author: CS
+# version: 1.0
+# Nov 2022
 
 import streamlit as st
 # other libs
-import numpy as np
 import pandas as pd
-from sklearn import datasets
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # -- Set page config
 apptitle = 'ST Assignment'
@@ -19,8 +15,7 @@ st.set_page_config(page_title=apptitle, page_icon='random', layout= 'wide', init
 st.title('ST assignment on the go..')
 st.balloons()
 
- ######################## section-1 ##################
- # Let's add a sub-title
+# Let's add a sub-title
 st.write("A **_cool_** ST assignment application")
 
 filename = 'Assignment1.xlsx' #INSERT FILENAME FOR ISPS EXTRACTED EXCEL 

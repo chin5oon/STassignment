@@ -13,8 +13,6 @@ st.set_page_config(page_title=apptitle, page_icon='random', layout= 'wide', init
 # random icons in the browser tab
 
 st.title('ST assignment on the go..')
-st.balloons()
-
 # Let's add a sub-title
 st.write("A **_cool_** ST assignment application")
 
@@ -35,8 +33,8 @@ PPVC = st.radio(
  	('PPVC', 'NON-PPVC'))
 
 storey = st.radio(
- 	'More than 30 storeys?',
- 	('> 30 storeys', '< 30 storeys'))
+ 	'How many storeys?',
+ 	('> 30 storeys', '< 30 storeys but > 10 storeys', '< 10 storeys'))
 
 
 st.write(f'The project is {complexST}, {PPVC} and {storey}.')
@@ -50,6 +48,7 @@ if PPVC == 'PPVC':
         ascending=False)
     st.write("Structural PO list:")
     st.write(df[["PO_name", "Department", "ppvc_lastdate", "ppvc_next"]])
+    st.balloons()
 
 else:
     if storey == "> 30 storeys":
@@ -69,6 +68,7 @@ else:
             ascending=False)
         st.write("GBW PO list:")
         st.write(df_gbw[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
+        st.balloons()
     
     else:
         if complexST == "COMPLEX":
@@ -81,11 +81,26 @@ else:
             st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
             st.write("Structural PO list:")
             st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
-        
+            st.balloons()
+
         else:
-            df = df1[df1['Can Assign?'] == 1]
-            df = df.sort_values(
-                by="10storey_next",
-                ascending=False)
-            st.write("Structural PO list:")
-            st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+            if storey == "< 10 storeys"
+                df = df1[df1['<10+complexlist'] == 1]
+                df = df[df['Can Assign?'] == 1]
+                df = df.sort_values(
+                    by="10storey_next",
+                    ascending=False)
+                st.write("Structural PO list:")
+                st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+                st.balloons()
+               
+            else:
+                df = df1[df1['Can Assign?'] == 1]
+                df = df.sort_values(
+                    by="10storey_next",
+                    ascending=False)
+                st.write("Structural PO list:")
+                st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+                st.balloons()
+
+

@@ -8,12 +8,12 @@ import pandas as pd
 
 # -- Set page config
 apptitle = 'ST Assignment'
-st.balloons()
 
 st.set_page_config(page_title=apptitle, page_icon='random', layout= 'wide', initial_sidebar_state="expanded")
 # random icons in the browser tab
 
 st.title('ST assignment on the go..')
+st.balloons()
 # Let's add a sub-title
 st.write("A **_cool_** ST assignment application")
 

@@ -8,6 +8,7 @@ import pandas as pd
 
 # -- Set page config
 apptitle = 'ST Assignment'
+st.balloons()
 
 st.set_page_config(page_title=apptitle, page_icon='random', layout= 'wide', initial_sidebar_state="expanded")
 # random icons in the browser tab
@@ -48,7 +49,6 @@ if PPVC == 'PPVC':
         ascending=False)
     st.write("Structural PO list:")
     st.write(df[["PO_name", "Department", "ppvc_lastdate", "ppvc_next"]])
-    st.balloons()
 
 else:
     if storey == "> 30 storeys":
@@ -68,7 +68,6 @@ else:
             ascending=False)
         st.write("GBW PO list:")
         st.write(df_gbw[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
-        st.balloons()
     
     else:
         if complexST == "COMPLEX":
@@ -80,7 +79,7 @@ else:
                     ascending=False)
                 st.write("Structural PO list:")
                 st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
-                st.balloons()
+
             else:
                 df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
                 df = df[df['Yrs_of_Exp'] >= 3]
@@ -91,12 +90,10 @@ else:
                 st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
                 st.write("Structural PO list:")
                 st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
-                st.balloons()
 
         else:
             if storey == "< 10 storeys":
                 st.write("There is no need for assignment.")
-                st.balloons()
                
             else:
                 df = df1[df1['Can Assign?'] == 1]
@@ -105,6 +102,5 @@ else:
                     ascending=False)
                 st.write("Structural PO list:")
                 st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
-                st.balloons()
 
 

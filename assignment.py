@@ -84,7 +84,7 @@ else:
             st.balloons()
 
         else:
-            if storey == "< 10 storeys"
+            if storey == "< 10 storeys":
                 df = df1[df1['<10+complexlist'] == 1]
                 df = df[df['Can Assign?'] == 1]
                 df = df.sort_values(

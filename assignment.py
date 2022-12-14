@@ -72,18 +72,6 @@ else:
     
     else:
         if complexST == "COMPLEX":
-            df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
-            df = df[df['Yrs_of_Exp'] >= 3]
-            df = df[df['Can Assign?'] == 1]
-            df = df.sort_values(
-                by="30storey_next",
-                ascending=False)
-            st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
-            st.write("Structural PO list:")
-            st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
-            st.balloons()
-
-        else:
             if storey == "< 10 storeys":
                 df = df1[df1['<10+complexlist'] == 1]
                 df = df[df['Can Assign?'] == 1]
@@ -92,6 +80,22 @@ else:
                     ascending=False)
                 st.write("Structural PO list:")
                 st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+                st.balloons()
+            else:
+                df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
+                df = df[df['Yrs_of_Exp'] >= 3]
+                df = df[df['Can Assign?'] == 1]
+                df = df.sort_values(
+                    by="30storey_next",
+                    ascending=False)
+                st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
+                st.write("Structural PO list:")
+                st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
+                st.balloons()
+
+        else:
+            if storey == "< 10 storeys":
+                st.write("There is no need for assignment.")
                 st.balloons()
                
             else:

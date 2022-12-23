@@ -48,7 +48,7 @@ if PPVC == 'PPVC':
         by="ppvc_next",
         ascending=False)
     st.write("Structural PO list:")
-    st.write(df[["PO_name", "Department", "ppvc_lastdate", "ppvc_next"]])
+    st.write(df[["PO_name", "Department", "Yrs_of_Exp", "ppvc_lastdate", "ppvc_next"]])
 
 else:
     if storey == "> 30 storeys":
@@ -59,7 +59,7 @@ else:
             by="30storey_next",
             ascending=False)
         st.write("Structural PO list:")
-        st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
+        st.write(df[["PO_name", "Department", "Yrs_of_Exp", "30storey_lastdate", "30storey_next"]])
         
         #GBW PO list
         df_gbw = df2[df2['Can Assign?'] == 1]
@@ -67,7 +67,7 @@ else:
             by="30storey_next",
             ascending=False)
         st.write("GBW PO list:")
-        st.write(df_gbw[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
+        st.write(df_gbw[["PO_name", "Department", "Yrs_of_Exp", "30storey_lastdate", "30storey_next"]])
     
     else:
         if complexST == "COMPLEX":
@@ -78,7 +78,7 @@ else:
                     by="10storey_next",
                     ascending=False)
                 st.write("Structural PO list:")
-                st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+                st.write(df[["PO_name", "Department", "Yrs_of_Exp", "10storey_lastdate", "10storey_next"]])
 
             else:
                 df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
@@ -89,7 +89,7 @@ else:
                     ascending=False)
                 st.write("Note: For Complex STs, use the same PO list for > 30 storey.")
                 st.write("Structural PO list:")
-                st.write(df[["PO_name", "Department", "30storey_lastdate", "30storey_next"]])
+                st.write(df[["PO_name", "Department", "Yrs_of_Exp", "30storey_lastdate", "30storey_next"]])
 
         else:
             if storey == "< 10 storeys":
@@ -101,6 +101,6 @@ else:
                     by="10storey_next",
                     ascending=False)
                 st.write("Structural PO list:")
-                st.write(df[["PO_name", "Department", "10storey_lastdate", "10storey_next"]])
+                st.write(df[["PO_name", "Department", "Yrs_of_Exp", "10storey_lastdate", "10storey_next"]])
 
 

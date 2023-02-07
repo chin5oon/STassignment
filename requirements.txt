@@ -3,5 +3,6 @@
 # platform: win-64
 streamlit==1.14.0
 pandas==1.0.5
+numpy==1.21.5
 xlrd == 1.1.0
 

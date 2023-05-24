@@ -71,7 +71,7 @@ else:
         if complexST == "COMPLEX":
             if storey == "< 10 storeys":
                 df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
-                df = df1[df1['<10+complexlist'] == 1]
+                df = df[df['<10+complexlist'] == 1]
                 df = df[df['Can Assign?'] == 1]
                 df["10storey_next"] = df["10storey_next"].astype(float)
                 df = df.sort_values(
@@ -98,7 +98,7 @@ else:
                
             else:
                 df = df1[df1['Can Assign?'] == 1]
-                df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
+                df = df[df['PPVClist'] == 0] #cannot be in the PPVC list
                 df["10storey_next"] = df["10storey_next"].astype(float)
                 df = df.sort_values(
                     by="10storey_next",

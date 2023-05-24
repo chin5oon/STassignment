@@ -42,13 +42,13 @@ st.write(f'The project is {complexST}, {PPVC} and {storey}.')
 
 
 if PPVC == 'PPVC':
-    df = df1[df1['PPVClist'] == 1]
-    df = df[df['Can Assign?'] == 1]
-    df = df.sort_values(
+   df = df1[df1['PPVClist'] == 1]
+   df = df[df['Can Assign?'] == 1]
+   df = df.sort_values(
         by="ppvc_next",
         ascending=False)
-    st.write("Structural PO list:")
-    st.write(df[["PO_name", "Department", "Yrs_of_Exp", "ppvc_lastdate", "ppvc_next"]])
+   st.write("Structural PO list:")
+   st.write(df[["PO_name", "Department", "Yrs_of_Exp", "ppvc_lastdate", "ppvc_next"]])
 
 else:
     if storey == "> 30 storeys":

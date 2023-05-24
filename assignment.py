@@ -42,19 +42,21 @@ st.write(f'The project is {complexST}, {PPVC} and {storey}.')
 
 
 if PPVC == 'PPVC':
-   df = df1[df1['PPVClist'] == 1]
-   df = df[df['Can Assign?'] == 1]
-   df = df.sort_values(
+    df = df1[df1['PPVClist'] == 1]
+    df = df[df['Can Assign?'] == 1]
+    df["ppvc_next"] = df["ppvc_next"].astype(float)
+    df = df.sort_values(
         by="ppvc_next",
         ascending=False)
-   st.write("Structural PO list:")
-   st.write(df[["PO_name", "Department", "Yrs_of_Exp", "ppvc_lastdate", "ppvc_next"]])
+    st.write("Structural PO list:")
+    st.write(df[["PO_name", "Department", "Yrs_of_Exp", "ppvc_lastdate", "ppvc_next"]])
 
 else:
     if storey == "> 30 storeys":
         df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
         df = df[df['Yrs_of_Exp'] >= 3]
         df = df[df['Can Assign?'] == 1]
+        df["30storey_next"] = df["30storey_next"].astype(float)
         df = df.sort_values(
             by="30storey_next",
             ascending=False)
@@ -63,6 +65,7 @@ else:
         
         #GBW PO list
         df_gbw = df2[df2['Can Assign?'] == 1]
+        df_gbw["30storey_next"] = df_gbw["30storey_next"].astype(float)
         df_gbw = df_gbw.sort_values(
             by="30storey_next",
             ascending=False)
@@ -74,6 +77,7 @@ else:
             if storey == "< 10 storeys":
                 df = df1[df1['<10+complexlist'] == 1]
                 df = df[df['Can Assign?'] == 1]
+                df["10storey_next"] = df["10storey_next"].astype(float)
                 df = df.sort_values(
                     by="10storey_next",
                     ascending=False)
@@ -84,6 +88,7 @@ else:
                 df = df1[df1['PPVClist'] == 0] #cannot be in the PPVC list
                 df = df[df['Yrs_of_Exp'] >= 3]
                 df = df[df['Can Assign?'] == 1]
+                df["30storey_next"] = df["30storey_next"].astype(float)
                 df = df.sort_values(
                     by="30storey_next",
                     ascending=False)
@@ -97,6 +102,7 @@ else:
                
             else:
                 df = df1[df1['Can Assign?'] == 1]
+                df["10storey_next"] = df["10storey_next"].astype(float)
                 df = df.sort_values(
                     by="10storey_next",
                     ascending=False)

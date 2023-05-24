@@ -17,13 +17,8 @@ st.balloons()
 # Let's add a sub-title
 st.write("A **_cool_** ST assignment application")
 
-filename = 'Assignment1.xlsx' #INSERT FILENAME FOR ISPS EXTRACTED EXCEL 
-filename_PO = 'PO List' #INSERT SHEET NAME FOR PO List
-filename_POGBW = 'PO GBW List' #INSERT SHEET NAME FOR PO GBW List
-
-xls = pd.ExcelFile(filename)
-df1 = pd.read_excel(xls, filename_PO, header = 1)
-df2 = pd.read_excel(xls, filename_POGBW, header = 1)
+df1 = pd.read_csv("PO.csv")
+df2 = pd.read_csv("PO_GBW.csv")
 
 complexST = st.radio(
  	'Complex?',

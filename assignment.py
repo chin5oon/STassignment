@@ -44,7 +44,6 @@ st.write(f'The project is {complexST}, {PPVC} and {storey}.')
 if PPVC == 'PPVC':
     df = df1[df1['PPVClist'] == 1]
     df = df[df['Can Assign?'] == 1]
-    df["ppvc_next"] = float(df["ppvc_next"])
     df = df.sort_values(
         by="ppvc_next",
         ascending=False)

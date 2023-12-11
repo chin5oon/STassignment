@@ -1,14 +1,14 @@
 ﻿S/N,PO_name,Department,PE_GEO,PE_Reg_Date,Yrs_of_Exp,GBW_flist,30_storey_all,30storey_ct,30storey_lastdate,30storey_next,Can Assign?
-1,Chuah Sze Seng,FED,,21-Sep-99,24,1,5,5,23-Jun-23,5,1
-2,Ben Tan,FED,,16-Feb-16,7,1,6,6,14-Apr-23,8,1
-3,Chow Wei Foo,FED,,21-Nov-06,16,1,5,5,20-Jan-23,11,1
-4,Kong Tze Foong,FED,,23-Sep-11,12,1,6,6,25-Oct-23,1,1
-5,Tan Geok Lee,FED,,15-Mar-07,16,1,4,4,19-May-23,6,1
-6,Huang Yongqing,FED,,21-Jun-18,5,1,6,6,8-Aug-23,4,1
-7,Lim Chun Hong,GED,,18-Aug-15,8,1,3,3,5-Apr-23,9,1
-8,Ng Hee Yang,GED,,16-Apr-09,14,1,4,4,23-Dec-22,13,1
-9,Chin Kheng Ghee,GED,,18-Oct-16,7,1,5,5,31-Aug-23,3,1
-10,Chow Wei Mun,GED,,26-Jan-07,16,1,6,6,10-Oct-23,2,1
-11,Anastasia Maria Santoso,GED,,18-Oct-18,5,1,2,2,16-Jan-23,12,1
-12,Chai Kui Fhen,GED,,18-Jul-19,4,1,4,4,18-Apr-23,7,1
-13,Lim Zhu Liang,GED,,23-Oct-17,6,1,4,4,4-Apr-23,10,1
+1,Chuah Sze Seng,FED,,21-Sep-99,24,1,5,5,23-Jun-23,8,1
+2,Ben Tan,FED,,16-Feb-16,7,1,7,7,8-Aug-23,6,1
+3,Chow Wei Foo,FED,,21-Nov-06,17,1,5,5,20-Jan-23,12,1
+4,Kong Tze Foong,FED,,23-Sep-11,12,1,5,5,25-Oct-23,3,1
+5,Tan Geok Lee,FED,,15-Mar-07,16,1,4,4,19-May-23,9,1
+6,Huang Yongqing,FED,,21-Jun-18,5,1,6,6,8-Aug-23,6,1
+7,Lim Chun Hong,GED,,18-Aug-15,8,1,3,3,5-Apr-23,10,1
+8,Ng Hee Yang,GED,,16-Apr-09,14,1,5,5,11-Dec-23,1,1
+9,Chin Kheng Ghee,GED,,18-Oct-16,7,1,5,5,31-Aug-23,5,1
+10,Chow Wei Mun,GED,,26-Jan-07,16,1,6,6,10-Oct-23,4,1
+11,Anastasia Maria Santoso,GED,,18-Oct-18,5,1,2,2,16-Jan-23,13,1
+12,Chai Kui Fhen,GED,,18-Jul-19,4,1,5,5,15-Nov-23,2,1
+13,Lim Zhu Liang,GED,,23-Oct-17,6,1,4,4,4-Apr-23,11,1
